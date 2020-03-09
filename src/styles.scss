@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$primary: grey;
+
+body {
+font-family: "Roboto", "sans-serif";
+font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: $primary;
+    padding: 2em 3em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav  {
+    float: right;
+    ul {
+    float: right;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    
+    li a {
+        padding: .5em;
+        
+    &:hover {
+    background: darken($primary, 10%);
+    }
+    }
+}}
+
+.play-container{
+    padding: 2em;
+    border: 1px solid grey;
+    margin: 1em;
+    
+}
