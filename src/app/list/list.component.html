@@ -1,1 +1,23 @@
-<p>list works!</p>
+<div *ngIf="articles" class='news-container'>
+
+
+    <article *ngFor="let article of articles" class="news-card">
+
+        <div class='news-card_content'>
+            <a href={{article.url}} target="_blank">
+                <div class="news-card_meta">
+
+
+
+                    {{article.source.name}} - {{article.publishedAt | dateAgo}}
+
+
+                </div>
+                <h2 class="news-card_title"> {{article.title}}</h2>
+                <p class="news-card_description"> {{article.description}}</p>
+
+            </a>
+        </div>
+    </article>
+
+</div>

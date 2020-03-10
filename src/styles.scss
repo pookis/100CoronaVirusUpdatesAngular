@@ -1,21 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-$primary: grey;
+$primary: #2d2d2d;
 
 body {
 font-family: "Roboto", "sans-serif";
 font-size: 18px;
+background-color: $primary;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
 
 header {
-    background: $primary;
-    padding: 2em 3em;
+    color: white;
+    padding: .5em .2em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 a {
@@ -23,20 +23,72 @@ a {
     text-decoration: none;
 }
 
-nav  {
-    float: right;
-    ul {
-    float: right;
-    margin: 0;
-    display: flex;
-    list-style-type: none;
-    
-    li a {
+
+article {
         padding: .5em;
-        
-    &:hover {
-    background: darken($primary, 10%);
+        background-color: darken($color: #575555, $amount:10);
     }
+
+.news-container {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2px 4px 0 rgba(50,50,93,.3);
+    background: #fcfcfc;
+    max-height: 200px;
+    border-radius: 10px;
+    margin: 0.4em 0;
+}
+
+.news-card:hover {
+    box-shadow: 9 7px 14px rgba(50, 50, 93, 0.12);
+    transform: translateY(-3px);
+    transform: translate(4s);
+    border: 1px solid #d7d7d7;
+}
+
+.news-card_content {
+    padding: .5em .5em 0;
+    
+}
+
+.news-card_description {
+font-size: 13px;
+color: grey;
+}
+
+
+.news-card_meta {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    color: grey;
+ 
+}
+.news-card_meta * {
+    margin: 0;
+}
+
+.news-card_title {
+    margin: 0;
+    font-size: 19px;
+    color: black;
+}
+
+@media only screen and (max-width: 660px) {
+    .news-card_image {
+        display: none;
     }
-}}
+    .news-card {
+        height: auto;
+        max-height: 1000px;
+    }
+}
 
